@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21179.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OiJ-TI-uiT">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21169.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LiveTextSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wrk-dQ-FbK">
+                                <rect key="frame" x="140.66666666666666" y="387.66666666666669" width="108.66666666666666" height="68.666666666666686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqv-Js-r3k">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="LiveScan"/>
+                                        <connections>
+                                            <segue destination="61f-9T-6Yg" kind="show" id="37H-kt-QC9"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqm-QU-BhU">
+                                        <rect key="frame" x="0.0" y="34.333333333333314" width="108.66666666666667" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="ImageScan"/>
+                                        <connections>
+                                            <segue destination="ZQI-JS-EEM" kind="show" id="UIe-of-RhH"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wrk-dQ-FbK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Auz-10-a8p"/>
+                            <constraint firstItem="wrk-dQ-FbK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K9n-cW-i5r"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GyF-no-wNZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-28"/>
+        </scene>
+        <!--Image Scan View Controller-->
+        <scene sceneID="Htc-My-JuL">
+            <objects>
+                <viewController id="ZQI-JS-EEM" customClass="ImageScanViewController" customModule="LiveTextSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="68O-NH-yXc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vpN-TX-BSc">
+                                <rect key="frame" x="0.0" y="88" width="390" height="679"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQO-c7-PuN">
+                                <rect key="frame" x="141.66666666666666" y="775" width="107" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Pick Image"/>
+                                <connections>
+                                    <action selector="showImagePicker:" destination="ZQI-JS-EEM" eventType="touchUpInside" id="6Y8-ZB-aOf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8K4-oZ-rl7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vpN-TX-BSc" firstAttribute="trailing" secondItem="8K4-oZ-rl7" secondAttribute="trailing" id="6fa-bi-3u8"/>
+                            <constraint firstItem="vpN-TX-BSc" firstAttribute="leading" secondItem="8K4-oZ-rl7" secondAttribute="leading" id="aCc-Yk-VJd"/>
+                            <constraint firstItem="iQO-c7-PuN" firstAttribute="top" secondItem="vpN-TX-BSc" secondAttribute="bottom" constant="8" symbolic="YES" id="fZC-M1-C0e"/>
+                            <constraint firstItem="vpN-TX-BSc" firstAttribute="top" secondItem="8K4-oZ-rl7" secondAttribute="top" id="hmU-Cu-4Xx"/>
+                            <constraint firstItem="iQO-c7-PuN" firstAttribute="bottom" secondItem="8K4-oZ-rl7" secondAttribute="bottom" id="kcq-OE-UtI"/>
+                            <constraint firstItem="iQO-c7-PuN" firstAttribute="centerX" secondItem="68O-NH-yXc" secondAttribute="centerX" id="tQw-uU-7AL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="50W-f4-2sq"/>
+                    <connections>
+                        <outlet property="imageView" destination="vpN-TX-BSc" id="COJ-eG-pM3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u8Q-qt-RO9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.8461538461538" y="-28.436018957345969"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JVH-Mh-jpD">
+            <objects>
+                <navigationController id="OiJ-TI-uiT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Owb-yp-VfV">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MbW-ZJ-8c5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOe-xJ-9xD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-723" y="-28"/>
+        </scene>
+        <!--Live Camera Scan View Controller-->
+        <scene sceneID="2vS-jb-JwH">
+            <objects>
+                <viewController id="61f-9T-6Yg" customClass="LiveCameraScanViewController" customModule="LiveTextSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sUr-VV-tzW">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCH-KL-j2d">
+                                <rect key="frame" x="158" y="405" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="showDataScanner:" destination="61f-9T-6Yg" eventType="touchUpInside" id="dO2-EP-aAI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Ie-G6-Lli"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="WMS-EY-pb0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="40L-H9-sgv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1054" y="-737"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
